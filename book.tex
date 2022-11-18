@@ -1,10 +1,19 @@
 \documentclass{article}
-\title{My first document}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, ukrainian]{babel}
+
+\title{Мій перший документ}
 \date{2022-11-14}
-\author{MAN Community}
+\author{МАН }
+
+
+
 \begin{document}
 	\maketitle
 	\newpage
+	
+\section{Тест підтримки української мови}
 	
 Obviously the statements title, date and author are not within the the document environment, so they will not directly show up in our document. The area before our main document is called preamble. In this specific example we use it to set up the values for the maketitle command for later use in our document. This command will automagically create a titlepage for us. The newpage command speaks for itself.
 
@@ -15,7 +24,7 @@ If we now compile again, we will see a nicely formatted title page, but we can s
 
 That’s it. You’ve successfully created your first LaTeX document. The following lessons will cover how to structure your document and we will then proceed to make use of many features of LaTeX.
 
-\section*{Summary}
+\section*{Висновки}
 
 A document has a preamble and document part
 The document environment must be defined
