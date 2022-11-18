@@ -1,7 +1,7 @@
 \documentclass{article}
 \title{My first document}
-\date{20122-11-14}
-\author{MaAN Community}
+\date{2022-11-14}
+\author{MAN Community}
 \begin{document}
 	\maketitle
 	\newpage
@@ -9,6 +9,8 @@
 Obviously the statements title, date and author are not within the the document environment, so they will not directly show up in our document. The area before our main document is called preamble. In this specific example we use it to set up the values for the maketitle command for later use in our document. This command will automagically create a titlepage for us. The newpage command speaks for itself.
 
 If we now compile again, we will see a nicely formatted title page, but we can spot a page number at the bottom of our title page. What if we decide, that actually, we don’t want to have that page number showing up there. We can remove it, by telling LaTeX to hide the page number for our first page. This can be done by adding the pagenumbering{gobble} command and then changing it back to \pagenumbering{arabic} on the next page numbers like so:
+
+%Привіт світ
 
 
 That’s it. You’ve successfully created your first LaTeX document. The following lessons will cover how to structure your document and we will then proceed to make use of many features of LaTeX.
