@@ -1,5 +1,6 @@
 \documentclass[oneside, final]{article}
 
+\usepackage[T1,T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[ukrainian]{babel}
 \usepackage{hyperref}
@@ -11,7 +12,9 @@
 
 %opening
 \title{\bf Залізничний семафор}
-\author{Задворний Олексій Костянтинович}
+\author{Задворний Олексій Костянтинович \\ 
+		email \href{mailto:zadvorny.alexey@gmail.com}{zadvorny.alexey@gmail.com}
+}
 
 \begin{document}
 
@@ -19,8 +22,8 @@
 
 \begin{abstract}
 \noindent Відомо, що для регулювання руху транспорту через залізничний переїзд передбачено кілька видів світлофорів.
-Один з них — два мигаючих по черзі червоних сигнали.\\
-Ваша задача — побудувати працюючу модель такого світлофора.\\
+Один з них — два мигаючих по черзі червоних сигнали.
+Ваша задача — побудувати працюючу модель такого світлофора.
 
 \noindent Проєкт призначений для молодших школярів з використанням Arduino UNO та середовища програмування mBlock або PictoBlox.
 \end{abstract}
@@ -38,36 +41,43 @@
 \section{Реалізація}
 	\begin{enumerate}
 		\item Підключить світлодіоди до макетної плати та до плати Arduino згідно схеми:
-			\begin{figure}[!h]
+			\begin{figure}[!ht]
 				\centering
 				\includegraphics[scale=0.5]{circuit.png}
 				\caption{Схема}
 			\end{figure}
 		\item Запрограмувати роботу семафора за допомогою програм mBlock або PictoBlox за схемою:
-		\begin{table}
-			\begin{tabular}{|c|c|}
-			
-			\end{tabular}
-		\end{table}
+		
+		\centering
+		\begin{tabular}{|c|c|} \hline
+			\includegraphics[scale=0.5]{signal01.png}
+			& 1 секунда
+			\\
+			\hline
+			\includegraphics[scale=0.5]{signal02.png} 
+			& 1 секунда
+			\\
+			\hline
+		\end{tabular}
 	\end{enumerate}
 	
 \section{Поради}
 	\begin{itemize}
 		\item Почніть програму з блоку
-			\begin{figure}[!h]
+			\begin{figure}[!ht]
 				\centering
 				\includegraphics[scale=0.75]{UNO_start.png}
 				\caption{Стартовий блок}
 			\end{figure}
 		\item Основні дії програми мають відбуватися у нескінченному циклі (цикл ЗАВЖДИ);
 		\item Щоб увімкнути світлодіод слід подати на відповідний цифровий пін (pin) високій рівень напруги (5 В, HIGH):
-			\begin{figure}[!h]
+			\begin{figure}[!ht]
 				\centering
 				\includegraphics[scale=0.75]{setPin13HIGH.png}
 				\caption{Встановлюємо HIGH на пін 13 }
 			\end{figure}
 		\item Щоб вимкнути світлодіод слід подати на відповідний цифровий пін (pin) низький рівень напруги (<1.5 В, LOW):
-			\begin{figure}[h!]
+			\begin{figure}[!ht]
 				\centering
 				\includegraphics[scale=0.75]{setPin13LOW.png}
 				\caption{Встановлюємо LOW на пін 13}
@@ -77,7 +87,7 @@
 \section{Прошивка та збереження}
 	\begin{itemize}
 	\item Завантажте прошивку у плату за допомогою кнопки
-		\begin{figure}[h!]
+		\begin{figure}[!ht]
 			\centering
 			\includegraphics[]{upload.png}
 		\end{figure}
@@ -87,8 +97,8 @@
 
 \section{Посилання}
 \begin{itemize}
-	\item mBlock 
-	\item PictoBlox 
+	\item Сайт mBlock \url{https://mblock.makeblock.com/en-us/}
+	\item Сайт PictoBlox \url{https://thestempedia.com/product/pictoblox/}
 \end{itemize}
 
 \end{document}
